@@ -1,0 +1,5 @@
+package com.aurionpro.bank.exceptions;
+
+public class ZeroAmountEnteredException {
+
+}

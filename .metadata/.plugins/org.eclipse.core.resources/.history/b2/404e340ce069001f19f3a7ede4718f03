@@ -1,0 +1,12 @@
+package com.aurionpro.batch.config;
+
+import org.springframework.batch.core.JobExecutionListener;
+
+public class JobCompletionNotificationListener implements JobExecutionListener {
+
+	public JobCompletionNotificationListener() {
+		super();
+	}
+
+	
+}

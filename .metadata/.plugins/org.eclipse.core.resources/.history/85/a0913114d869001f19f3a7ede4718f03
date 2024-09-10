@@ -1,0 +1,5 @@
+package com.aurionpro.batch.config;
+
+public class JobCompletionNotificationListener {
+
+}

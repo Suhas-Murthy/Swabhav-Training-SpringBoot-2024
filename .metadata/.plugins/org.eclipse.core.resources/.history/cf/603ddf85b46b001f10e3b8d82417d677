@@ -1,0 +1,64 @@
+package com.aurionpro.bank.exceptions;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+import com.aurionpro.bank.errors.BankErrorResponse;
+
+@ControllerAdvice
+public class BankExceptionHandler {
+
+//	@ExceptionHandler
+//	public ResponseEntity<BankErrorResponse> handleInsufficientBalanceException(InsufficientBalanceException exception){
+//		System.out.println("handler called");
+//		BankErrorResponse error = new BankErrorResponse();
+//		error.setStatus(HttpStatus.BAD_REQUEST.value());
+//		error.setErrorMessage(exception.getMessage());
+//		error.setTimestamp(System.currentTimeMillis());
+//		return new ResponseEntity<>(error,HttpStatus.BAD_REQUEST);
+//		
+//	}
+//	@ExceptionHandler
+//	public ResponseEntity<BankErrorResponse> handleNegativeAmountEnteredException(NegativeAmountEnteredException exception){
+//		
+//		BankErrorResponse error = new BankErrorResponse();
+//		error.setStatus(HttpStatus.BAD_REQUEST.value());
+//		error.setErrorMessage(exception.getMessage());
+//		error.setTimestamp(System.currentTimeMillis());
+//		return new ResponseEntity<>(error,HttpStatus.BAD_REQUEST);
+//		
+//	}
+//	@ExceptionHandler
+//	public ResponseEntity<BankErrorResponse> handleZeroAmountEnteredException(ZeroAmountEnteredException exception){
+//		
+//		BankErrorResponse error = new BankErrorResponse();
+//		error.setStatus(HttpStatus.BAD_REQUEST.value());
+//		error.setErrorMessage(exception.getMessage());
+//		error.setTimestamp(System.currentTimeMillis());
+//		return new ResponseEntity<>(error,HttpStatus.BAD_REQUEST);
+//		
+//	}
+//	
+//	@ExceptionHandler
+//	public ResponseEntity<BankErrorResponse> handleSameAccountTransferNotAllowedException(SameAccountTransferNotAllowedException exception){
+//		
+//		BankErrorResponse error = new BankErrorResponse();
+//		error.setStatus(HttpStatus.BAD_REQUEST.value());
+//		error.setErrorMessage(exception.getMessage());
+//		error.setTimestamp(System.currentTimeMillis());
+//		return new ResponseEntity<>(error,HttpStatus.BAD_REQUEST);
+//		
+//	}
+	@ExceptionHandler
+	public ResponseEntity<BankErrorResponse> handleRuntimeException(RuntimeException exception){
+		System.out.println("3");
+		BankErrorResponse error = new BankErrorResponse();
+		error.setStatus(HttpStatus.BAD_REQUEST.value());
+		error.setErrorMessage(exception.getMessage());
+		error.setTimestamp(System.currentTimeMillis());
+		return new ResponseEntity<>(error,HttpStatus.BAD_REQUEST);
+		
+	}
+}

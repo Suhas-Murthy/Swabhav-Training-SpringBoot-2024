@@ -1,0 +1,23 @@
+package com.aurionpro.bank.controller;
+
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import java.util.List;
+
+@RestController
+@RequestMapping("/kyc")
+public class KYCController {
+    
+    private final KYCService kycService;
+
+    public KYCController(KYCService kycService) {
+        this.kycService = kycService;
+    }
+
+    @PostMapping("/upload/{customerId}")
+    public String uploadKYCDocuments(@PathVariable int customerId, @RequestParam("files") List<MultipartFile> files) {
+        kycService.uploadDocuments(customerId, files);
+        return "Documents uploaded successfully";
+    }
+}
+

@@ -1,0 +1,5 @@
+package com.aurionpro.bank.config;
+
+public class Cloud {
+
+}

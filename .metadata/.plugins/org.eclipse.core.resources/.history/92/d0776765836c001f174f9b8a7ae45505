@@ -1,0 +1,8 @@
+package com.aurionpro.bank.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.aurionpro.bank.entity.KYCDocuments;
+
+public interface KYCDocumentsRepository extends JpaRepository<KYCDocuments, Integer> {
+}

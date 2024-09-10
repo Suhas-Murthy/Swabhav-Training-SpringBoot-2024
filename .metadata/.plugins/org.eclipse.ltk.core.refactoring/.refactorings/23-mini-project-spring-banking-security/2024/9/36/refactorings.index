@@ -1,0 +1,11 @@
+1725372949259	Rename package 'com.aurionpro.jwt'
+1725372966682	Rename package 'com.aurionpro.jwt.config'
+1725373022870	Rename package 'com.aurionpro.jwt.controller'
+1725373060013	Rename package 'com.aurionpro.jwt.dto'
+1725373091055	Rename package 'com.aurionpro.jwt.entity'
+1725373103255	Rename package 'com.aurionpro.jwt.exceptions'
+1725373113729	Rename package 'com.aurionpro.jwt.repository'
+1725373142605	Rename package 'com.aurionpro.jwt.security'
+1725373153524	Rename package 'com.aurionpro.jwt.service'
+1725374609995	Delete element
+1725392619800	Delete element

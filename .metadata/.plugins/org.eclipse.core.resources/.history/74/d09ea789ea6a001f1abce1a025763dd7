@@ -1,0 +1,22 @@
+package com.aurionpro.bank.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+
+@AllArgsConstructor
+@RequiredArgsConstructor
+@Data
+public class CustomerDto {
+	private int customerId;
+    @NotBlank(message = "First name is mandatory")
+	private String customerFirstName;
+    @NotBlank(message = "Last name is mandatory")
+	private String customerLastName;
+    @Pattern(regexp = "^[0-9]{10}$", message = "Invalid mobile number, must be 10 digits")		
+	private String mobileNumber;
+	private String username;
+	private String password;
+}
